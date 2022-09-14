@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         val row = 9
         val col = 3
         var buttonCount = 0
+        var letter = 'A'
 
 
         for (i in 1..row) {
@@ -25,10 +26,12 @@ class MainActivity : AppCompatActivity() {
             linearLayoutVertical.addView(linearLayoutRow)
             for (j in 1..col) {
                 val button = Button(this)
+                button.text = letter.toString()
 
                 linearLayoutRow.addView(button)
 
                 buttonCount++
+                letter++
                 if (buttonCount == 26) break
             }
         }
