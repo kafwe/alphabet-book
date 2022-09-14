@@ -1,6 +1,7 @@
 package com.example.alphabetbook
 
 import android.os.Bundle
+import android.view.Gravity
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         for (i in 1..row) {
             val linearLayoutRow = LinearLayout(this)
             linearLayoutRow.orientation = LinearLayout.HORIZONTAL
+            linearLayoutRow.gravity = Gravity.CENTER
             linearLayoutVertical.addView(linearLayoutRow)
             for (j in 1..col) {
                 val button = Button(this)
