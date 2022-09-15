@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
             for (j in 1..col) {
                 val button = Button(this)
                 button.text = letter.toString()
-                button.id = "slide"
 
                 linearLayoutRow.addView(button)
 
