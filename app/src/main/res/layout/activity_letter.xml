@@ -6,7 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".LetterActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="379dp"
+        android:layout_height="623dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/overview_button"
+        tools:srcCompat="@tools:sample/avatars" />
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="382dp"
         android:layout_height="54dp"
         android:orientation="horizontal"
@@ -14,51 +25,47 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/back_button"
+        app:layout_constraintTop_toBottomOf="@+id/overview_button"
         app:layout_constraintVertical_bias="0.973">
 
         <Button
             android:id="@+id/first_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/a"
             android:layout_marginHorizontal="5dp"
-             />
+            android:layout_weight="1"
+            android:text="@string/a" />
 
         <Button
             android:id="@+id/prev_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/prev"
             android:layout_marginHorizontal="5dp"
-             />
+            android:layout_weight="1"
+            android:text="@string/prev" />
 
         <Button
             android:id="@+id/next_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/next"
             android:layout_marginHorizontal="5dp"
-             />
+            android:layout_weight="1"
+            android:text="@string/next" />
 
         <Button
             android:id="@+id/last_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/z"
             android:layout_marginHorizontal="5dp"
-             />
+            android:layout_weight="1"
+            android:text="@string/z" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/back_button"
+        android:id="@+id/overview_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/back"
+        android:text="@string/overview"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"

@@ -24,9 +24,11 @@ class MainActivity : AppCompatActivity() {
             linearLayoutRow.orientation = LinearLayout.HORIZONTAL
             linearLayoutRow.gravity = Gravity.CENTER
             linearLayoutVertical.addView(linearLayoutRow)
+
             for (j in 1..col) {
                 val button = Button(this)
                 button.text = letter.toString()
+                button.id = "slide"
 
                 linearLayoutRow.addView(button)
 
