@@ -8,13 +8,15 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="379dp"
-        android:layout_height="623dp"
+        android:layout_width="426dp"
+        android:layout_height="369dp"
+        android:layout_marginBottom="200dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/overview_button"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -24,9 +26,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.551"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/overview_button"
-        app:layout_constraintVertical_bias="0.973">
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/first_button"
@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
+            android:onClick="first"
             android:text="@string/a" />
 
         <Button
@@ -42,6 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
+            android:onClick="prev"
             android:text="@string/prev" />
 
         <Button
@@ -50,6 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
+            android:onClick="next"
             android:text="@string/next" />
 
         <Button
@@ -58,19 +61,8 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
+            android:onClick="last"
             android:text="@string/z" />
     </LinearLayout>
-
-    <Button
-        android:id="@+id/overview_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/overview"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.049" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

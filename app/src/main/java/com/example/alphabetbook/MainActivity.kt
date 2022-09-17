@@ -1,10 +1,13 @@
 package com.example.alphabetbook
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+
+const val EXTRA_MESSAGE = "com.example.alphabetbook.MESSAGE"
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,10 +29,21 @@ class MainActivity : AppCompatActivity() {
             linearLayoutVertical.addView(linearLayoutRow)
 
             for (j in 1..col) {
-                val button = Button(this)
-                button.text = letter.toString()
+                val letterButton = Button(this)
 
-                linearLayoutRow.addView(button)
+                with(letterButton) {
+                    id = buttonCount + 1
+                    text = letter.toString()
+                    setOnClickListener {
+                        val imageNumber = this.id
+                        val intent = Intent(this@MainActivity, LetterActivity::class.java).apply {
+                            putExtra(EXTRA_MESSAGE, imageNumber)
+                        }
+                        startActivity(intent)
+                    }
+                }
+
+                linearLayoutRow.addView(letterButton)
 
                 buttonCount++
                 letter++
@@ -37,4 +51,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 }
