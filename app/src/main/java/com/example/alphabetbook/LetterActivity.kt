@@ -1,5 +1,6 @@
 package com.example.alphabetbook
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
@@ -83,6 +84,18 @@ class LetterActivity() : AppCompatActivity() {
         imageNumber++
         setNavigationButtonsState()
         setImage()
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        val sharedPreference = this.getSharedPreferences(
+            getString(R.string.preference_file_key), Context.MODE_PRIVATE)
+
+        val editor = sharedPreference.edit()
+        editor.putString("activity", this.localClassName)
+        editor.putInt("letter", imageNumber)
+        editor.commit()
     }
 
 }

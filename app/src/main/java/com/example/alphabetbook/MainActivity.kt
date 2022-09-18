@@ -1,5 +1,6 @@
 package com.example.alphabetbook
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
 
         val linearLayoutVertical = findViewById<LinearLayout>(R.id.linear_layout_vert)
@@ -51,5 +53,16 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    override fun onPause() {
+        super.onPause()
+        val sharedPreference = getSharedPreferences(
+            getString(R.string.preference_file_key), Context.MODE_PRIVATE)
+
+        val editor = sharedPreference.edit()
+        editor.putString("activity", this.localClassName)
+        editor.commit()
+    }
+
 
 }
