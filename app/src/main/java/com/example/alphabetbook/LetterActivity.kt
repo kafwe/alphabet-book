@@ -86,8 +86,8 @@ class LetterActivity() : AppCompatActivity() {
         setImage()
     }
 
-    override fun onPause() {
-        super.onPause()
+    override fun onStop() {
+        super.onStop()
 
         val sharedPreference = this.getSharedPreferences(
             getString(R.string.preference_file_key), Context.MODE_PRIVATE)
@@ -95,7 +95,7 @@ class LetterActivity() : AppCompatActivity() {
         val editor = sharedPreference.edit()
         editor.putString("activity", this.localClassName)
         editor.putInt("letter", imageNumber)
-        editor.commit()
+        editor.apply()
     }
 
 }
