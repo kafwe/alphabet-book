@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         sharedPreference = getSharedPreferences(
             getString(R.string.preference_file_key), Context.MODE_PRIVATE)
+
         val lastActivity = sharedPreference.getString("activity", this.localClassName)
 
         if (lastActivity == "LetterActivity") {
