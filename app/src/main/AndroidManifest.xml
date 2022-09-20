@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LetterActivity"
+            android:name=".views.LetterActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
     </application>

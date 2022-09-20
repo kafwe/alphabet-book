@@ -1,4 +1,4 @@
-package com.example.alphabetbook
+package com.example.alphabetbook.views
 
 import android.content.Context
 import android.content.Intent
@@ -8,6 +8,8 @@ import android.view.Gravity
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.example.alphabetbook.R
+import com.example.alphabetbook.views.LetterActivity
 
 const val EXTRA_MESSAGE = "com.example.alphabetbook.MESSAGE"
 
