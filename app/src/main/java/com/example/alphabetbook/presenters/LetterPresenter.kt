@@ -2,8 +2,8 @@ package com.example.alphabetbook.presenters
 
 import android.content.Context
 import com.example.alphabetbook.Contract
+import com.example.alphabetbook.LetterActivity
 import com.example.alphabetbook.R
-import com.example.alphabetbook.views.LetterActivity
 
 /**
  * Class that contains the  core business logic.
@@ -11,8 +11,7 @@ import com.example.alphabetbook.views.LetterActivity
  * It triggers the View class to make the necessary
  * changes to the UI.
  *
- * @author Jordy Kafwe – KFWJOR001
- * @author Dylan Tasdhary - TSDDYL001
+ * @author Jordy Kafwe
  */
 class LetterPresenter(private var letterView: LetterActivity,
                       private val letterModel: Contract.Model) : Contract.Presenter {

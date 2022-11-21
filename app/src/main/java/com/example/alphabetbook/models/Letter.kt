@@ -5,8 +5,7 @@ import com.example.alphabetbook.Contract
 /**
  * Class that keeps track of which letter the app is currently on.
  *
- * @author Jordy Kafwe – KFWJOR001
- * @author Dylan Tasdhary - TSDDYL001
+ * @author Jordy Kafwe
  */
 
 class Letter(override var imageNumber: Int = 1) : Contract.Model {

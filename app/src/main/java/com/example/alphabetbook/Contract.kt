@@ -1,5 +1,7 @@
 package com.example.alphabetbook
 
+import android.view.View
+
 interface Contract {
     interface View {
         fun setNavigationButtonsState(imageNumber: Int)

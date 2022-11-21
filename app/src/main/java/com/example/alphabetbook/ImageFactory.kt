@@ -3,13 +3,11 @@ package com.example.alphabetbook
 import android.content.Context
 import android.graphics.Bitmap
 import com.bumptech.glide.Glide
-import com.example.alphabetbook.R
 
 /**
  * Factory that downsamples and returns bitmaps of images.
  *
- * @author Jordy Kafwe - KFWJOR001
- * @author Dylan Tasdhary - TSDDYL001
+ * @author Jordy Kafwe
  */
 class ImageFactory {
     companion object {

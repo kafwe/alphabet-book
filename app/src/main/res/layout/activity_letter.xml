@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.LetterActivity">
+    tools:context=".LetterActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -34,7 +34,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
-            android:onClick="first"
             android:text="@string/a" />
 
         <Button
@@ -43,7 +42,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
-            android:onClick="prev"
             android:text="@string/prev" />
 
         <Button
@@ -52,7 +50,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
-            android:onClick="next"
             android:text="@string/next" />
 
         <Button
@@ -61,7 +58,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
-            android:onClick="last"
             android:text="@string/z" />
     </LinearLayout>
 

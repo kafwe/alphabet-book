@@ -1,4 +1,4 @@
-package com.example.alphabetbook.views
+package com.example.alphabetbook
 
 import android.content.Context
 import android.content.Intent
@@ -8,11 +8,14 @@ import android.view.Gravity
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.example.alphabetbook.R
-import com.example.alphabetbook.views.LetterActivity
 
 const val EXTRA_MESSAGE = "com.example.alphabetbook.MESSAGE"
 
+/**
+ * Class that handles the user interface for the Overview page
+ *
+ * @author Jordy Kafwe
+ */
 class MainActivity : AppCompatActivity() {
     private lateinit var sharedPreference: SharedPreferences
 
@@ -32,6 +35,9 @@ class MainActivity : AppCompatActivity() {
         generateAlphabetButtons()
     }
 
+    /**
+     * Generates the 25 button grid of letters
+     */
     private fun generateAlphabetButtons() {
         val linearLayoutVertical = findViewById<LinearLayout>(R.id.linear_layout_vert)
         val row = 9
@@ -71,6 +77,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    /**
+     * Starts the last viewed LetterActivity
+     */
     private fun goToSavedLetter() {
         val imageNumber = sharedPreference.getInt("letter", 1)
         val intent = Intent(this, LetterActivity::class.java).apply {

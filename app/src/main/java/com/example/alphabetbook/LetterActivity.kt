@@ -1,12 +1,9 @@
-package com.example.alphabetbook.views
+package com.example.alphabetbook
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.alphabetbook.Contract
-import com.example.alphabetbook.ImageFactory
-import com.example.alphabetbook.R
 import com.example.alphabetbook.models.Letter
 import com.example.alphabetbook.presenters.LetterPresenter
 
@@ -14,8 +11,7 @@ import com.example.alphabetbook.presenters.LetterPresenter
 /**
  * Class that handles the user interface for the Letter page
  *
- * @author Jordy Kafwe - KFWJOR001
- * @author Dylan Tasdhary - TSDDYL001
+ * @author Jordy Kafwe
  */
 class LetterActivity() : AppCompatActivity(), Contract.View {
     lateinit var presenter: LetterPresenter
