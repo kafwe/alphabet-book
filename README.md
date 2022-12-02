@@ -8,7 +8,7 @@ An Android app implementation of an alphabet book
 - The user can navigate through all the 26 letter in the alphabet – seeing the respective image for each letter with every click.
 - App always opens to the last letter (letter page pictured on the right above) viewed, unless it was last opened on the overview page (left in the picture above), in which case it should open on the overview page. 
 
-## Non-functional requirements
+## Non-functional features
 - Uses the Model-view-presenter architecture
 - Samples all images so that the app does not waste memory unnecessarliy rendering hi-res images
 - A seperate thread is used to load images so that this process does not block the main UI thread. That is, it does not make the UI unreponsive while it is loading the image. 
